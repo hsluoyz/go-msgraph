@@ -164,8 +164,8 @@ func (g *GraphClient) MakePOSTAPICall(apicall string, getParams url.Values, body
 
 	// TODO: Improve performance with using $skip & paging instead of retrieving all results with $top
 	// TODO: MaxPageSize is currently 999, if there are any time more than 999 entries this will make the program unpredictable... hence start to use paging (!)
-	getParams.Add("$top", strconv.Itoa(MaxPageSize))
-	req.URL.RawQuery = getParams.Encode() // set query parameters
+	//getParams.Add("$top", strconv.Itoa(MaxPageSize))
+	//req.URL.RawQuery = getParams.Encode() // set query parameters
 
 	return g.performRequest(req, v)
 }
