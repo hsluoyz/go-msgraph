@@ -192,7 +192,7 @@ func (g *GraphClient) ListAlerts() ([]Alert, error) {
 	var marsh struct {
 		Alerts []Alert `json:"value"`
 	}
-	err := g.makeGETAPICall(resource, nil, &marsh)
+	err := g.MakeGETAPICall(resource, nil, &marsh)
 	return marsh.Alerts, err
 }
 
@@ -233,7 +233,7 @@ func (g *GraphClient) ListSecureScores() ([]SecureScore, error) {
 	var marsh struct {
 		Scores []SecureScore `json:"value"`
 	}
-	err := g.makeGETAPICall(resource, nil, &marsh)
+	err := g.MakeGETAPICall(resource, nil, &marsh)
 	return marsh.Scores, err
 }
 
@@ -292,6 +292,6 @@ func (g *GraphClient) ListSecureScoreControlProfiles() ([]SecureScoreControlProf
 	var marsh struct {
 		Profiles []SecureScoreControlProfile `json:"value"`
 	}
-	err := g.makeGETAPICall(resource, nil, &marsh)
+	err := g.MakeGETAPICall(resource, nil, &marsh)
 	return marsh.Profiles, err
 }
